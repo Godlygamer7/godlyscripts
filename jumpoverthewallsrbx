@@ -1,0 +1,417 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))()
+local venyx = library.new("Jump Over The Walls", 5013109572)
+
+local themes = {
+Background = Color3.fromRGB(24, 24, 24),
+Glow = Color3.fromRGB(0, 0, 0),
+Accent = Color3.fromRGB(10, 10, 10),
+LightContrast = Color3.fromRGB(20, 20, 20),
+DarkContrast = Color3.fromRGB(14, 14, 14),  
+TextColor = Color3.fromRGB(255, 255, 255)
+}
+
+-- first page
+local page = venyx:addPage("Autofarms", 5012544693)
+local section1 = page:addSection("Autofarms")
+
+section1:addToggle("Autofarm Wins", nil, function(value)
+_G.autofarm = value
+
+while _G.autofarm do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3969.79297, -4.29652405, -84.4235229, 0.654043019, -6.02134094e-08, 0.756457329, 4.10953724e-08, 1, 4.40676118e-08, -0.756457329, 2.26478258e-09, 0.654043019)
+wait(4)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3969.79297, -4.29652405, -84.4235229, 0.654043019, -6.02134094e-08, 0.756457329, 4.10953724e-08, 1, 4.40676118e-08, -0.756457329, 2.26478258e-09, 0.654043019)
+end
+end)
+
+section1:addToggle("Autofarm Coins", nil, function(value)
+_G.autofarm2 = value
+
+while _G.autofarm2 do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(524.861145, -4.29652405, -82.7683029, 0.0449583083, -4.4694513e-08, -0.998988867, -5.20983541e-08, 1, -4.70843773e-08, 0.998988867, 5.41625091e-08, 0.0449583083)
+wait(5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(524.861145, -4.29652405, -82.7683029, 0.0449583083, -4.4694513e-08, -0.998988867, -5.20983541e-08, 1, -4.70843773e-08, 0.998988867, 5.41625091e-08, 0.0449583083)
+end
+end)
+
+section1:addToggle("Autofarm Both", nil, function(value)
+_G.autofarmboth = value
+
+while _G.autofarmboth do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(524.861145, -4.29652405, -82.7683029, 0.0449583083, -4.4694513e-08, -0.998988867, -5.20983541e-08, 1, -4.70843773e-08, 0.998988867, 5.41625091e-08, 0.0449583083)
+wait(5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3969.79297, -4.29652405, -84.4235229, 0.654043019, -6.02134094e-08, 0.756457329, 4.10953724e-08, 1, 4.40676118e-08, -0.756457329, 2.26478258e-09, 0.654043019)
+end
+end)
+
+local page2 = venyx:addPage("Player", 5012544693)
+local section2 = page2:addSection("Player")
+
+section2:addSlider("WalkSpeed", 20, 0, 250, function(value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+end)
+
+section2:addButton("Reset WalkSpeed", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+end)
+
+section2:addSlider("JumpPower", 50, 0, 250, function(value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+end)
+
+section2:addButton("Reset JumpPower", function()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+section2:addToggle("BHop (Useless)", nil, function(value)
+_G.BHop = value
+
+while _G.BHop do
+wait()
+game.Players.LocalPlayer.Character.Humanoid.Jump = value
+end
+end)
+
+section2:addToggle("Sit", nil, function(value)
+game.Players.LocalPlayer.Character.Humanoid.Sit = value
+end)
+
+section2:addKeybind("Sit Keybind", Enum.KeyCode.B, function()
+local sit = true
+
+if sit then
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+else
+    game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end
+end)
+
+section2:addButton("SmallBoost", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,70,0)
+end)
+
+section2:addKeybind("SmallBoost Keybind", Enum.KeyCode.N, function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,70,0)
+end)
+
+section2:addButton("Boost", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,120,0)
+end)
+
+section2:addKeybind("Boost Keybind", Enum.KeyCode.X, function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,120,0)
+end)
+
+section2:addButton("SuperBoost", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,200,0)
+end)
+
+section2:addKeybind("SuperBoost Keybind", Enum.KeyCode.V, function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,200,0)
+end)
+
+section2:addButton("MEGABOOST (Use With Caution)", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,600,0)
+end)
+
+section2:addKeybind("MEGABOOST Keybind", Enum.KeyCode.Z, function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,600,0)
+end)
+
+section2:addButton("OMEGABOOST (Use With Extra Caution)", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,999,0)
+end)
+
+section2:addKeybind("OMEGABOOST Keybind", Enum.KeyCode.L, function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,900,0)
+end)
+
+section2:addButton("Lagback", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,9999999999999999999999999999999999999999999999999,0)
+end)
+
+section2:addButton("Die", function()
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+
+section2:addButton("DieV2", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,120,0)
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,240,0)
+wait(1.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,480,0)
+wait(1.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,960,0)
+wait(1.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,1920,0)
+wait(1.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,3840,0)
+wait(1.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,7680,0)
+wait(1.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,15360,0)
+wait(1.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,105030,0)
+wait(10)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+
+section2:addButton("DieV3", function()
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].HumanoidRootPart.Rotation = Vector3.new(90, 90, 90)
+wait(1)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].HumanoidRootPart.Rotation = Vector3.new(45, 90, 45)
+wait(1)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].HumanoidRootPart.Rotation = Vector3.new(90, 90, 90)
+wait(1)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].HumanoidRootPart:Clone()
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,120,0)
+wait()
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+wait(0.4)
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,-120,0)
+wait(2)
+power = 750000 -- change this to make it more or less powerful
+ 
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+wait(3)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity + Vector3.new(0,90000,0)
+wait(4)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].Head.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftHand.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightHand.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftLowerArm.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightLowerArm.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftUpperArm.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightUpperArm.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftFoot.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftLowerLeg.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].UpperTorso.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftUpperLeg.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightFoot.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightLowerLeg.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LowerTorso.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightUpperLeg.Size = Vector3.new(0.001, 0.001, 0.001)
+wait(2)
+local args = {
+    [1] = "///???/2E32432FSD",
+    [2] = "System"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+local args = {
+    [1] = "///???/2E32432FSD",
+    [2] = "System"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+local args = {
+    [1] = "///???/2E32432FSD",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+kill()
+print("DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH DEATH DETAH DEATH DEATH ")
+end)
+
+local page3 = venyx:addPage("Misc", 5012544693)
+local section3 = page3:addSection("Misc")
+
+section3:addButton("Invisible (Maybe ClientSided)", function()
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].Head.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftHand.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightHand.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftLowerArm.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightLowerArm.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftUpperArm.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightUpperArm.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftFoot.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftLowerLeg.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].UpperTorso.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LeftUpperLeg.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightFoot.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightLowerLeg.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].LowerTorso.Size = Vector3.new(0.001, 0.001, 0.001)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].RightUpperLeg.Size = Vector3.new(0.001, 0.001, 0.001)
+end)
+
+section3:addButton("InvisibleV2 (FE)", function()
+-- FE Invisible
+
+Local = game:GetService('Players').LocalPlayer
+Char  = Local.Character
+touched,tpdback = false, false
+Local.CharacterAdded:connect(function(char)
+    if script.Disabled ~= true then
+        wait(.25)
+        loc = Char.HumanoidRootPart.Position
+        Char:MoveTo(box.Position + Vector3.new(0,.5,0))
+    end
+end)
+game:GetService('UserInputService').InputBegan:connect(function(key)
+    if key.KeyCode == Enum.KeyCode.Equals then
+        if script.Disabled ~= true then
+            script.Disabled = true
+            print'you may re-execute'
+        end
+    end
+end)
+box = Instance.new('Part',workspace)
+box.Anchored = true
+box.CanCollide = true
+box.Size = Vector3.new(10,1,10)
+box.Position = Vector3.new(0,10000,0)
+box.Touched:connect(function(part)
+    if (part.Parent.Name == Local.Name) then
+        if touched == false then
+            touched = true
+            function apply()
+                if script.Disabled ~= true then
+                    no = Char.HumanoidRootPart:Clone()
+                    wait(.25)
+                    Char.HumanoidRootPart:Destroy()
+                    no.Parent = Char
+                    Char:MoveTo(loc)
+                    touched = false
+                end end
+            if Char then
+                apply()
+            end
+        end
+    end
+end)
+repeat wait() until Char
+loc = Char.HumanoidRootPart.Position
+Char:MoveTo(box.Position + Vector3.new(0,.5,0))
+end)
+
+section3:addButton("Remove Completions Tag", function()
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].Head.BillboardGui:Destroy()
+end)
+
+section3:addButton("Crash Server [BETA]", function()
+while wait() do
+loadstring(game:HttpGet("https://gist.githubusercontent.com/Godlygamer7/575010f80ba9d5f1b29f85524c501538/raw/ff315b272d10a824cbed1e9cb162de1d541530d8/gistfile1.txt"))()
+end
+end)
+
+section3:addButton("Remove NameTag", function()
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].Head.NameGui:Destroy()
+end)
+
+section3:addButton("ServerHop", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/vgTwZAXi"))()
+end)
+
+section3:addButton("Rejoin", function()
+game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end)
+
+local page5 = venyx:addPage("Exploits", 5012544693)
+local section4 = page5:addSection("Exploits")
+
+section4:addButton("Infinite Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+local page69 = venyx:addPage("WayPoints", 5012544693)
+local section69 = page69:addSection("WayPoint1")
+local section420 = page69:addSection("WayPoint2")
+local section69420 = page69:addSection("Load WayPoints")
+local sectionINF = page69:addSection("Delete WayPoints")
+
+section69:addButton("Set Waypoint", function()
+local w1 = Instance.new("Part",game.Workspace)
+w1.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+w1.Anchored = true
+w1.CastShadow = false
+w1.CanCollide = false
+w1.Name = "w1"
+w1.Transparency = .7
+w1.Size = 1, 1, 1
+end)
+
+section420:addButton("Set Waypoint", function()
+local w2 = Instance.new("Part",game.Workspace)
+w2.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+w2.Anchored = true
+w2.CastShadow = false
+w2.CanCollide = false
+w2.Name = "w2"
+w2.Transparency = .7
+w2.Size = 1, 1, 1
+end)
+
+section69420:addButton("Load WayPoint 1", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.w1.CFrame
+end)
+
+section69420:addButton("Load WayPoint 2", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.w2.CFrame
+end)
+
+sectionINF:addButton("Delete WayPoint 1", function()
+game:GetService("Workspace").w1:Destroy()
+end)
+
+sectionINF:addButton("Delete WayPoint 2", function()
+game:GetService("Workspace").w2:Destroy()
+end)
+
+local theme = venyx:addPage("Theme", 5012544693)
+local colors = theme:addSection("Colors")
+
+for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+colors:addColorPicker(theme, color, function(color3)
+venyx:setTheme(theme, color3)
+end)
+end
+
+local page5 = venyx:addPage("Gui", 5012544693)
+local section5 = page5:addSection("Gui")
+
+section5:addKeybind("Hide Gui Keybind", Enum.KeyCode.LeftControl, function()
+venyx:toggle()
+end, function()
+print("Changed Keybind")
+end)
+
+section5:addButton("Destroy Gui", function()
+game:GetService("CoreGui")["Jump Over The Walls"]:Destroy()
+_G.autofarm = false
+_G.autofarm2 = false
+_G.autofarmboth = false
+_G.BHop = false
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+-- load
+venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
